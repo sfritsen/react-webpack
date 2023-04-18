@@ -1,6 +1,7 @@
 {
   "name": "react-webpack",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "private": true,
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
@@ -19,9 +24,5 @@
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.3"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

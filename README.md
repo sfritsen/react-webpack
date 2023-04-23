@@ -1,19 +1,19 @@
-# React with Webpack Boilerplate
+# React Webpack Boilerplate
 This is a simple start for react with webpack.
-
-## Available Scripts
-In the project directory, you can run:
 
 ## How to use
 1. Clone repository `git clone git@github.com:sfritsen/react-webpack.git`
 2. Install dependancies `npm install`
 3. Run one of the scripts below
 
-### `npm run start`
+## Available Scripts
+In the project directory, you can run:
+
+## `npm run dev`
 This runs the local dev server on port 3000.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run build`
+## `npm run build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 

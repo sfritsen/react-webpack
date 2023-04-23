@@ -2,32 +2,50 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.js',
-	output: {
-		filename: 'main.js',
-		path: path.resolve(__dirname, 'build'),
+	mode: 'development',
+	entry: {
+		bundle: path.resolve(__dirname, 'src/index.js'),
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: path.join(__dirname, 'public', 'index.html'),
-		}),
-	],
+	output: {
+		path: path.resolve(__dirname, 'build'),
+		filename: '[name].[contenthash].js',
+		clean: true,
+		assetModuleFilename: '[name][ext]',
+	},
+	devtool: 'source-map',
 	devServer: {
 		static: {
-			directory: path.join(__dirname, 'build'),
+			directory: path.resolve(__dirname, 'dist'),
 		},
 		port: 3000,
+		open: true,
+		hot: true,
+		compress: true,
+		historyApiFallback: true,
 	},
 	module: {
-		// exclude node_modules
 		rules: [
+			{
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
+			},
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: ['babel-loader'],
 			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: 'asset/resource',
+			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: 'src/template.html',
+		}),
+	],
 	// pass all js files through Babel
 	resolve: {
 		extensions: ['*', '.js', '.jsx'],

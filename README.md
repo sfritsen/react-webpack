@@ -16,14 +16,18 @@ This is a simple start for react with webpack.
 2. Install dependancies `npm install`
 3. Run one of the scripts below
 
-## Available Scripts
+### Available Scripts
 In the project directory, you can run:
 
-## `npm run dev`
+```
+npm run dev
+```
 This runs the local dev server on port 3000.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## `npm run build`
+```
+npm run build
+```
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 

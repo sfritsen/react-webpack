@@ -1,8 +1,7 @@
 # React Webpack Boilerplate
 This is a simple start for react with webpack.
 
-## Includes the following features...
-
+### Includes the following features...
 - Babel Loader
 - Sass Loader With Dart Sass
 - HTMLWebpackPlugin
@@ -11,7 +10,7 @@ This is a simple start for react with webpack.
 - Source Maps
 - Caching
 
-## How to use
+### How to use
 1. Clone repository `git clone git@github.com:sfritsen/react-webpack.git`
 2. Install dependancies `npm install`
 3. Run one of the scripts below
